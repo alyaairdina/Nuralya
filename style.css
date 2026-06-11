@@ -471,8 +471,8 @@ button,
 }
 
 .featured-video{
-    width:80%;
-    max-width:950px;
+    width:75%;
+    max-width:850px;
     margin:0 auto;
     overflow:hidden;
     border-radius:30px;
@@ -481,7 +481,7 @@ button,
 
 .featured-video iframe{
     width:100%;
-    height:530px;
+    height:480px;
     border:none;
     display:block;
 }
@@ -636,8 +636,8 @@ footer p{
 ====================== */
 
 .about-video{
-    width:80%;
-    max-width:950px;
+    width:75%;
+    max-width:850px;
     margin:50px auto;
     overflow:hidden;
     border-radius:30px;
@@ -646,7 +646,7 @@ footer p{
 
 .about-video iframe{
     width:100%;
-    height:530px;
+    height:480px;
     border:none;
     display:block;
 }
@@ -1538,8 +1538,8 @@ footer p{
 ====================== */
 
 .family-video{
-    width:80%;
-    max-width:950px;
+    width:75%;
+    max-width:850px;
     margin:50px auto;
     overflow:hidden;
     border-radius:30px;
@@ -1548,7 +1548,7 @@ footer p{
 
 .family-video iframe{
     width:100%;
-    height:530px;
+    height:480px;
     border:none;
     display:block;
 }
@@ -1868,8 +1868,8 @@ footer p{
 }
 
 .cat-video-grid iframe{
-    width:340px;
-    height:605px;
+    width:300px;
+    height:533px;
     border:none;
     border-radius:25px;
     box-shadow:0 8px 20px rgba(0,0,0,0.08);
