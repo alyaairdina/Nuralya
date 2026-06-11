@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Current Obsessions</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="interests-page">
+
+<audio id="bgMusic" autoplay loop>
+    <source src="audio/bgsound.mp3" type="audio/mpeg">
+</audio>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+
+<video autoplay muted loop playsinline>
+
+<source src="video/logo.mp4" type="video/mp4">
+
+</video>
+</a>
+</div>
+
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+
+<a href="about.html" class="dropdown-toggle">
+Get To Know Alya
+</a>
+
+<ul class="dropdown-menu"> 
+
+<li><a href="about.html#biodata">my biodata</a></li> 
+
+<li><a href="about.html#vibe">my vibe</a></li> 
+
+<li><a href="about.html#likes">things i like & dislike</a></li> 
+
+<li><a href="about.html#hometown">my hometown</a></li> 
+
+</ul> 
+
+</li>
+
+<li>
+    <a href="education.html">My Academic Journey</a>
+</li>
+
+<li class="dropdown">
+
+<a href="family.html" class="dropdown-toggle">
+My Beloved Family
+</a>
+
+<ul class="dropdown-menu">
+
+<li><a href="family.html#myfamily">My Family</a></li>
+<li><a href="family.html#mycats">My Cats</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="friends.html">My Lovelies</a></li>
+
+<li><a href="interests.html">Current Obsessions</a></li>
+
+<li><a href="moments.html">Memory Lane</a></li>
+
+</ul>
+
+</nav>
+
+<!-- ======================
+     INTRO NOTE
+====================== -->
+
+<section class="obsession-note">
+
+    <h1>current obsessions</h1>
+
+    <p>
+        my brain changes favourites every few weeks, but these are the little things i'm currently loving and carrying with me through everyday life.
+    </p>
+
+</section>
+
+
+<!-- ======================
+     CURRENTLY ON REPEAT
+====================== -->
+
+<section class="music-section">
+
+    <h2>currently on repeat 🎧</h2>
+
+    <p class="music-note">
+        my "just one more replay" collection.
+    </p>
+
+
+    <div class="music-grid">
+
+        <!-- SONG 1 -->
+
+        <div class="music-card">
+
+            <div class="music-header">
+                Music Player
+            </div>
+
+            <img src="images/song1.jpeg" alt="Ikaw Lang">
+
+            <h3>Ikaw Lang</h3>
+
+            <p class="artist">NOBITA</p>
+
+            <div class="music-buttons">
+
+                <button onclick="playSong('song1')">▶</button>
+
+            </div>
+
+            <a href="https://open.spotify.com/track/4legZBvlei0pwnrzzxMzol?si=pOPcuyt7RbqxObRtgd_jWw"
+               target="_blank">
+
+                ♫ Open Full Song
+
+            </a>
+
+            <audio id="song1">
+
+                <source src="audio/song1.m4a" type="audio/mp4">
+
+            </audio>
+
+        </div>
+
+
+        <!-- SONG 2 -->
+
+        <div class="music-card">
+
+            <div class="music-header">
+                Music Player
+            </div>
+
+            <img src="images/song2.jpeg" alt="Sempurna">
+
+            <h3>Sempurna</h3>
+
+            <p class="artist">Andra & The Backbone</p>
+
+            <div class="music-buttons">
+
+                <button onclick="playSong('song2')">▶</button>
+
+            </div>
+
+            <a href="https://open.spotify.com/track/2UgCs0i0rNHUH2jKE5NZHE?si=aVSQfW1hToaJbCtE3fQvjg"
+               target="_blank">
+
+                ♫ Open Full Song
+
+            </a>
+
+            <audio id="song2">
+
+                <source src="audio/song2.m4a" type="audio/mp4">
+
+            </audio>
+
+        </div>
+
+
+
+        <!-- SONG 3 -->
+
+        <div class="music-card">
+
+            <div class="music-header">
+                Music Player
+            </div>
+
+            <img src="images/song3.jpeg" alt="Permaisuri">
+
+            <h3>Permaisuri</h3>
+
+            <p class="artist">DATA</p>
+
+            <div class="music-buttons">
+
+                <button onclick="playSong('song3')">▶</button>
+
+            </div>
+
+            <a href="https://open.spotify.com/track/5pPOzQys6TQbv6cby5e7cG?si=S7hOsOw4RnmPenGJeJOV0A"
+               target="_blank">
+
+                ♫ Open Full Song
+
+            </a>
+
+            <audio id="song3">
+
+                <source src="audio/song3.m4a" type="audio/mp4">
+
+            </audio>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SECOND ROW -->
+
+    <div class="music-grid-bottom">
+
+        <!-- SONG 4 -->
+
+        <div class="music-card">
+
+            <div class="music-header">
+                Music Player
+            </div>
+
+            <img src="images/song4.jpeg" alt="Firasat">
+
+            <h3>Firasat</h3>
+
+            <p class="artist">Marcell</p>
+
+            <div class="music-buttons">
+
+                <button onclick="playSong('song4')">▶</button>
+
+            </div>
+
+            <a href="https://open.spotify.com/track/3cHjFfvxo7ZIz9Px32V9aA?si=of0ndJjPSyqSdPsFF5KBHQ"
+               target="_blank">
+
+                ♫ Open Full Song
+
+            </a>
+
+            <audio id="song4">
+
+                <source src="audio/song4.m4a" type="audio/mp4">
+
+            </audio>
+
+        </div>
+
+
+
+        <!-- SONG 5 -->
+
+        <div class="music-card">
+
+            <div class="music-header">
+                Music Player
+            </div>
+
+            <img src="images/song5.jpeg" alt="Those Eyes">
+
+            <h3>Those Eyes</h3>
+
+            <p class="artist">New West</p>
+
+            <div class="music-buttons">
+
+                <button onclick="playSong('song5')">▶</button>
+
+            </div>
+
+            <a href="https://open.spotify.com/track/50x1Ic8CaXkYNvjmxe3WXy?si=PGvygYY5Q5eN6UFf7SagBA"
+               target="_blank">
+
+                ♫ Open Full Song
+
+            </a>
+
+            <audio id="song5">
+
+                <source src="audio/song5.m4a" type="audio/mp4">
+
+            </audio>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================
+     EVERYTHING ELSE I'M LOVING
+====================== -->
+
+<section class="flower-section">
+
+    <h2>everything else i'm loving ♡</h2>
+
+    <p class="flower-note">
+        tap the flower to uncover the little things that currently taking up space in my heart
+    </p>
+
+
+    <!-- FLOWER BUTTON -->
+
+    <div class="flower-container">
+
+        <button class="flower-button" onclick="toggleMoodboard()">
+
+            🌼
+
+        </button>
+
+    </div>
+
+
+    <!-- SCATTERED MOODBOARD -->
+
+    <div id="moodboard">
+
+        <div class="mood-item item1">
+            <img src="images/matcha.jpeg" alt="Matcha">
+            <p>matcha</p>
+        </div>
+
+        <div class="mood-item item2">
+            <img src="images/cats.jpeg" alt="Cats">
+            <p>cats</p>
+        </div>
+
+        <div class="mood-item item3">
+            <img src="images/makeup.jpeg" alt="Makeup">
+            <p>makeup</p>
+        </div>
+
+        <div class="mood-item item4">
+            <img src="images/drama.jpeg" alt="Dramas">
+            <p>dramas</p>
+        </div>
+
+        <div class="mood-item item5">
+            <img src="images/games.jpeg" alt="Games">
+            <p>games</p>
+        </div>
+
+        <div class="mood-item item6">
+            <img src="images/motorbike.jpeg" alt="Motorbike">
+            <p>motorbike</p>
+        </div>
+
+        <div class="mood-item item7">
+            <img src="images/guitar.jpeg" alt="Guitar">
+            <p>guitar</p>
+        </div>
+
+        <div class="mood-item item8">
+            <img src="images/crochet.jpeg" alt="Crochet">
+            <p>crochet</p>
+        </div>
+
+
+        <div class="mood-item item9">
+            <img src="images/books.jpeg" alt="Books">
+            <p>books</p>
+
+        </div>
+
+        <div class="mood-item item10">
+
+            <img src="images/desserts.jpeg" alt="Desserts">
+            <p>desserts</p>
+
+         </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ======================
+     BUNNY PUZZLE
+====================== -->
+
+<section class="puzzle-section">
+
+    <h2>one last little puzzle ♡</h2>
+
+    <p>
+        click all the pieces for a tiny reward before you go.
+    </p>
+
+
+    <div class="puzzle-grid">
+
+        <img src="images/piece1.jpeg"
+             class="piece"
+             onclick="collectPiece(this)">
+
+        <img src="images/piece2.jpeg"
+             class="piece"
+             onclick="collectPiece(this)">
+
+        <img src="images/piece3.jpeg"
+             class="piece"
+             onclick="collectPiece(this)">
+
+        <img src="images/piece4.jpeg"
+             class="piece"
+             onclick="collectPiece(this)">
+
+    </div>
+
+
+    <div id="finalPuzzle">
+
+        <img src="images/puzzle.jpeg"
+             alt="Completed Puzzle">
+
+        <h3>✨ you solved it!</h3>
+
+        <p>
+
+            just like these little obsessions,<br>
+
+            sometimes the smallest pieces make life feel complete.
+
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>hit me up & let's be mutuals</h3>
+
+    <div class="footer-links">
+
+        <a href="https://instagram.com/alynirss"
+           target="_blank">
+           Instagram
+        </a>
+
+        <a href="mailto:hcneylya@gmail.com">
+           Email
+        </a>
+
+    </div>
+
+    <p>© 2026 Alya's Archive</p>
+
+    <p>Recommended Browser: Microsoft Edge | Last Updated: May 2026</p>
+
+</footer>
+
+<script>
+
+let currentSong = null;
+
+function playSong(songId){
+
+    const song = document.getElementById(songId);
+
+    /* STOP PREVIOUS SONG */
+
+    if(currentSong && currentSong !== song){
+
+        currentSong.pause();
+        currentSong.currentTime = 0;
+
+    }
+
+    if(song.paused){
+
+        /* PAUSE WEBSITE MUSIC */
+
+        bgMusic.pause();
+
+        song.play().then(() => {
+
+            currentSong = song;
+
+        }).catch(error => {
+
+            console.log("Playback failed:", error);
+
+        });
+
+    } else {
+
+        /* STOP SONG */
+
+        song.pause();
+        song.currentTime = 0;
+
+        currentSong = null;
+
+        /* RESUME WEBSITE MUSIC */
+
+        bgMusic.play().catch(() => {});
+
+    }
+
+}
+
+/* RESUME WEBSITE MUSIC WHEN SONG FINISHES */
+
+const songs = document.querySelectorAll(".music-card audio");
+
+songs.forEach(song => {
+
+    song.addEventListener("ended", () => {
+
+        currentSong = null;
+
+        bgMusic.play().catch(() => {});
+
+    });
+
+});
+
+</script>
+
+<!-- ======================
+     JAVASCRIPT
+====================== -->
+
+<script>
+
+/* FLOWER TOGGLE */
+
+function toggleMoodboard(){
+
+    const moodboard =
+    document.getElementById("moodboard");
+
+    if(moodboard.style.display === "block"){
+
+        moodboard.style.display = "none";
+
+    }
+
+    else{
+
+        moodboard.style.display = "block";
+
+    }
+
+}
+
+
+/* PUZZLE */
+
+let solvedPieces = 0;
+
+function collectPiece(piece){
+
+    if(!piece.classList.contains("solved")){
+
+        piece.classList.add("solved");
+
+        solvedPieces++;
+
+    }
+
+    if(solvedPieces === 4){
+
+        document.querySelector(".puzzle-grid").style.display = "none";
+
+        document.getElementById("finalPuzzle").style.display = "block";
+
+    }
+
+}
+
+</script>
+
+<script>
+
+const bgMusic = document.getElementById("bgMusic");
+
+
+/* RESTORE MUSIC STATE */
+
+window.addEventListener("load", () => {
+
+    if(localStorage.getItem("musicPlaying") === "true"){
+
+        bgMusic.play().catch(() => {});
+
+    }
+
+});
+
+
+/* START MUSIC AFTER FIRST USER INTERACTION */
+
+document.addEventListener("click", () => {
+
+    if(bgMusic.paused){
+
+        bgMusic.play().catch(() => {});
+        localStorage.setItem("musicPlaying", "true");
+
+    }
+
+}, { once:true });
+
+
+/* SAVE WHETHER MUSIC IS PLAYING */
+
+bgMusic.addEventListener("play", () => {
+
+    localStorage.setItem("musicPlaying", "true");
+
+});
+
+bgMusic.addEventListener("pause", () => {
+
+    localStorage.setItem("musicPlaying", "false");
+
+});
+
+
+/* PAUSE WEBSITE MUSIC WHEN A VIDEO WITH SOUND PLAYS */
+
+const videos = document.querySelectorAll("video");
+
+videos.forEach(video => {
+
+    /* Ignore muted videos like your logo */
+
+    if(video.muted) return;
+
+    video.addEventListener("play", () => {
+
+        bgMusic.pause();
+
+    });
+
+    video.addEventListener("pause", () => {
+
+        if(!video.ended){
+
+            bgMusic.play().catch(() => {});
+
+        }
+
+    });
+
+    video.addEventListener("ended", () => {
+
+        bgMusic.play().catch(() => {});
+
+    });
+
+});
+
+/* RESUME WEBSITE MUSIC WHEN SONG FINISHES */
+
+const songs = document.querySelectorAll(".music-card audio");
+
+songs.forEach(song => {
+
+    song.addEventListener("ended", () => {
+
+        currentSong = null;
+
+        bgMusic.play().catch(() => {});
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>

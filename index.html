@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alya's Archive</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<audio id="bgMusic" autoplay loop>
+    <source src="audio/bgsound.mp3" type="audio/mpeg">
+</audio>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+
+<video autoplay muted loop playsinline>
+
+<source src="video/logo.mp4" type="video/mp4">
+
+</video>
+</a>
+</div>
+
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+
+<a href="about.html" class="dropdown-toggle">
+Get To Know Alya
+</a>
+
+<ul class="dropdown-menu"> 
+
+<li><a href="about.html#biodata">my biodata</a></li> 
+
+<li><a href="about.html#vibe">my vibe</a></li> 
+
+<li><a href="about.html#likes">things i like & dislike</a></li> 
+
+<li><a href="about.html#hometown">my hometown</a></li> 
+
+</ul> 
+
+</li>
+
+<li>
+    <a href="education.html">My Academic Journey</a>
+</li>
+
+<li class="dropdown">
+
+<a href="family.html" class="dropdown-toggle">
+My Beloved Family
+</a>
+
+<ul class="dropdown-menu">
+
+<li><a href="family.html#myfamily">My Family</a></li>
+<li><a href="family.html#mycats">My Cats</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="friends.html">My Lovelies</a></li>
+
+<li><a href="interests.html">Current Obsessions</a></li>
+
+<li><a href="moments.html">Memory Lane</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<img src="images/banner.jpg" alt="Alya Banner">
+
+</section>
+
+<section class="welcome-note">
+
+<div class="note">
+
+<h1>hello there!</h1>
+
+<p>
+Welcome to a glimpse of alya's world
+</p>
+
+</div>
+
+<div class="small-video">
+
+<video autoplay muted loop playsinline>
+
+<source src="video/vidmeme1.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+</section>
+
+<section class="explore">
+
+<h2>come and explore my world</h2>
+
+<div class="polaroid-wrapper">
+
+<div class="polaroid rotate-left">
+
+<a href="about.html">
+
+<img src="images/me1.jpeg" alt="About Me">
+
+<p>Get To Know Alya</p>
+
+</a>
+
+</div>
+
+<div class="polaroid rotate-right">
+
+<a href="education.html">
+
+<img src="images/edu1.jpeg" alt="Education">
+
+<p>My Academic Journey</p>
+
+</a>
+
+</div>
+
+<div class="polaroid rotate-left">
+
+<a href="family.html">
+
+<img src="images/family.jpeg" alt="Family">
+
+<p>My Beloved Family</p>
+
+</a>
+
+</div>
+
+<div class="polaroid rotate-right">
+
+<a href="friends.html">
+
+<img src="images/friends2.jpeg" alt="Friends">
+
+<p>My Lovelies</p>
+
+</a>
+
+</div>
+
+<div class="polaroid rotate-left">
+
+<a href="interests.html">
+
+<img src="images/minat.jpeg" alt="Hobbies">
+
+<p>Current Obsessions</p>
+
+</a>
+
+</div>
+
+<div class="polaroid rotate-right">
+
+    <a href="moments.html">
+
+        <img src="images/memo.jpeg" alt="Memory">
+
+        <p>Memory Lane</p>
+
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="little-snippets">
+
+    <h2>little snippets</h2>
+
+    <div class="featured-video">
+
+        <iframe
+            src="https://www.youtube.com/embed/4ImpYlOUKXg?autoplay=1&mute=1&loop=1&playlist=4ImpYlOUKXg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+
+<section class="quote">
+
+<p>
+"hope you enjoyed exploring my little world!"
+</p>
+
+</section>
+
+
+<footer>
+
+    <h3>hit me up & let's be mutuals</h3>
+
+    <div class="footer-links">
+
+        <a href="https://instagram.com/alynirss"
+           target="_blank">
+           Instagram
+        </a>
+
+        <a href="mailto:hcneylya@gmail.com">
+           Email
+        </a>
+
+    </div>
+
+    <p>© 2026 Alya's Archive</p>
+
+    <p>Recommended Browser: Microsoft Edge | Last Updated: May 2026</p>
+
+</footer>
+
+<script>
+
+const bgMusic = document.getElementById("bgMusic");
+
+/* AUTOPLAY */
+
+document.addEventListener("click", function () {
+
+    if (bgMusic.paused) {
+        bgMusic.play().catch(() => {});
+    }
+
+}, { once: true });
+
+
+/* ONLY VIDEOS WITH SOUND */
+
+const videos = document.querySelectorAll("video");
+
+videos.forEach(video => {
+
+    if (video.muted) return;
+
+    video.addEventListener("play", () => {
+
+        bgMusic.pause();
+
+    });
+
+    video.addEventListener("pause", () => {
+
+        if (!video.ended) {
+            bgMusic.play().catch(() => {});
+        }
+
+    });
+
+    video.addEventListener("ended", () => {
+
+        bgMusic.play().catch(() => {});
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
+

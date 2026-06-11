@@ -1,0 +1,2810 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --green:#9EB89A;
+    --pink:#F49BB5;
+    --cream:#FDF8F2;
+    --brown:#7A5C52;
+
+    --soft-green:#F5FAF3;
+    --soft-pink:#FFF0F5;
+    --shadow:0 10px 25px rgba(0,0,0,0.08);
+    --radius:25px;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    background:#fefce3;
+    color:#290008;
+    overflow-x:hidden;
+    cursor: url("images/cursor.png"), pointer;
+}
+
+
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ffe4ec;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#9eb89a;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#f49bb5;
+}
+
+/* ABOUT PAGE */
+
+.about-page{
+    background:#fff0f5;
+}
+
+.education-page{
+    background:var(--soft-green);
+}
+
+.family-page{
+    background:var(--soft-pink);
+}
+
+.friends-page{
+    background:var(--soft-green);
+}
+
+.interests-page{
+    background:var(--soft-pink);
+}
+
+.memory-page{
+    background:var(--soft-green);
+}
+
+
+/* MOVING TEXT */
+
+.moving-text{
+    width:100%;
+    overflow:hidden;
+    background:#f49bb5;
+    padding:10px 0;
+    white-space:nowrap;
+}
+
+.moving-track{
+    display:flex;
+    width:max-content;
+    animation:scrollText 18s linear infinite;
+}
+
+.moving-track span{
+    font-size:14px;
+    color:white;
+    padding-right:80px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+@keyframes scrollText{
+
+0%{
+    transform:translateX(0);
+}
+
+100%{
+    transform:translateX(-50%);
+}
+
+}
+
+/* ABOUT HEADER */
+
+.about-header{
+    position:relative;
+    max-width:800px;
+    margin:50px auto;
+    overflow:hidden;
+    border-radius:30px;
+}
+
+.about-header video{
+    width:100%;
+    height:auto;
+
+    display:block;
+}
+
+.about-overlay{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+}
+
+.about-overlay h1{
+    font-size:70px;
+    font-family:'Gaegu', cursive;
+}
+
+.about-overlay p{
+    font-size:18px;
+    margin-top:10px;
+}
+
+
+/* NOTE */
+
+.about-note{
+    padding:100px 10%;
+    display:flex;
+    justify-content:center;
+}
+
+.note-card{
+    background:white;
+    max-width:700px;
+    padding:50px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.note-card h2{
+    font-size:50px;
+    margin-bottom:20px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+}
+
+.note-card p{
+    line-height:2;
+}
+
+/* GALLERY */
+
+.mini-gallery{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.mini-gallery h2{
+    font-size:45px;
+    margin-bottom:50px;
+    color:#6d8b74;
+    font-family:'Gaegu', cursive;
+}
+
+.gallery-wrapper{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.gallery-wrapper img{
+    width:250px;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.gallery-wrapper img:hover{
+    transform:translateY(-10px);
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.about-overlay h1{
+    font-size:45px;
+}
+
+.note-card{
+    padding:35px;
+}
+
+.gallery-wrapper img{
+    width:100%;
+    height:auto;
+}
+
+}
+
+
+.navbar{
+    background:#9eb89a;
+    padding:18px 40px;
+    display:flex;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo video{
+    width:130px;
+    height:auto;
+    object-fit:contain;
+}
+
+.navbar > ul{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:28px;
+    list-style:none;
+    flex-wrap:wrap;
+    margin:0 auto;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#ffd6e2;
+}
+
+.dropdown{
+    position:relative;
+    padding-bottom:0px;
+}
+
+.dropdown-toggle{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:25px;
+    left:0;
+    background:#dfe8d7;
+    min-width:230px;
+    display:none;
+    flex-direction:column;
+    padding:10px 0;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    z-index:999;
+}
+
+.dropdown-menu li{
+    list-style:none;
+}
+
+.dropdown-menu a{
+    color:#4a403d;
+    padding:12px 20px;
+    display:block;
+    font-size:14px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.dropdown-menu a:hover{
+    background:#f8cddd;
+    color:#f49bb5;
+}
+
+.dropdown:hover .dropdown-menu{
+    display:flex;
+}
+
+a,
+button,
+.polaroid{
+    cursor: url("images/cursor.png"), pointer;
+}
+
+
+.hero img{
+    width:100%;
+    display:block;
+}
+
+.welcome-note{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    padding:80px 10%;
+    flex-wrap:wrap;
+}
+
+.note{
+    background:#ffffff;
+    padding:40px;
+    max-width:500px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transform:rotate(-2deg);
+}
+
+.note h1{
+    font-family:'Gaegu', cursive;
+    font-size:55px;
+    color:#f49bb5;
+    margin-bottom:15px;
+}
+
+.note p{
+    line-height:1.8;
+}
+
+.small-video video{
+    width:180px;
+    border:1px solid white;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.10);
+    transform:rotate(4deg);
+    object-fit:cover;
+}
+
+.widgets{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    padding:30px 10%;
+}
+
+.widget{
+    width:250px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+}
+
+.green{
+    background:#b8c9b5;
+}
+
+.pink{
+    background:#ffd6e2;
+}
+
+.widget h3{
+    font-family:'Gaegu', cursive;
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.explore{
+    padding:100px 8%;
+}
+
+.explore h2{
+    text-align:center;
+    font-size:45px;
+    color:#6d8b74;
+    margin-bottom:60px;
+    font-family:'Gaegu', cursive;
+}
+
+.polaroid-wrapper{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:40px;
+}
+
+.polaroid{
+    background:white;
+    width:280px;
+    padding:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.rotate-left{
+    transform:rotate(-4deg);
+}
+
+.rotate-right{
+    transform:rotate(4deg);
+}
+
+.polaroid:hover{
+    transform:translateY(-10px) rotate(0deg);
+}
+
+.polaroid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.polaroid p{
+    text-align:center;
+    margin-top:15px;
+    font-weight:600;
+    color:#4a403d;
+}
+
+.memory-polaroid{
+    background:white;
+    width:260px;
+    padding:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transform:rotate(-3deg);
+}
+
+.memory-polaroid video{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.polaroid a{
+    text-decoration:none;
+}
+
+
+.little-snippets{
+    padding:110px 0;
+    text-align:center;
+}
+
+.little-snippets h2{
+    font-size:42px;
+    margin-bottom:45px;
+    color:#f49bb5;
+    font-family:'Gaegu', cursive;
+}
+
+.featured-video{
+    width:80%;
+    max-width:950px;
+    margin:0 auto;
+    overflow:hidden;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.10);
+}
+
+.featured-video iframe{
+    width:100%;
+    height:530px;
+    border:none;
+    display:block;
+}
+
+.featured-video p{
+    margin-top:20px;
+    font-size:15px;
+}
+
+
+.music-player{
+    text-align:center;
+    padding:80px 10%;
+}
+
+.music-player h2{
+    font-family:'Gaegu', cursive;
+    font-size:40px;
+    margin-bottom:20px;
+    color:#6d8b74;
+}
+
+.quote{
+    padding:100px 15%;
+    text-align:center;
+}
+
+.quote p{
+    font-size:30px;
+    color:#f49bb5;
+    font-family:'Gaegu', cursive;
+}
+
+/* FOOTER */
+
+footer{
+    background:#9EB89A;
+    text-align:center;
+    padding:55px 20px;
+    margin-top:80px;
+}
+
+footer h3{
+    font-family:'Gaegu', cursive;
+    font-size:36px;
+    color:#fdfaf3;
+    margin-bottom:25px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.footer-links a{
+    color:#fdfaf3;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.footer-links a:hover{
+    color:#f49bb5;
+    transform:translateY(-3px);
+}
+
+footer p{
+    color:rgba(255,255,255,0.9);
+    margin-bottom:10px;
+    font-size:14px;
+    line-height:1.7;
+}
+
+
+/* ======================
+   MOBILE
+====================== */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:20px;
+}
+
+.navbar ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.note h1{
+    font-size:45px;
+}
+
+.explore h2{
+    font-size:35px;
+}
+
+.about-video-overlay h1{
+    font-size:45px;
+}
+
+.about-wrapper{
+    position:static;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+}
+
+.about-photo{
+    position:static;
+    transform:none;
+    order:-1;
+}
+
+.about-photo img{
+    width:240px;
+    height:300px;
+}
+
+.info-card{
+    position:static;
+    transform:none !important;
+    width:100%;
+    max-width:350px;
+}
+
+}
+
+.hometown-container{
+    flex-direction:column;
+}
+
+.hometown-text{
+    text-align:center;
+}
+
+.pin-card img{
+    width:100%;
+    max-width:300px;
+    height:auto;
+}
+
+/* ======================
+   ABOUT VIDEO
+====================== */
+
+.about-video{
+    width:80%;
+    max-width:950px;
+    margin:50px auto;
+    overflow:hidden;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.10);
+}
+
+.about-video iframe{
+    width:100%;
+    height:530px;
+    border:none;
+    display:block;
+}
+
+/* ======================
+   ALL ABOUT ALYA
+====================== */
+
+.all-about{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.all-about h2{
+    font-size:55px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+    margin-bottom:80px;
+}
+
+.about-wrapper{
+    position:relative;
+    max-width:1000px;
+    height:700px;
+    margin:0 auto;
+}
+
+
+
+/* PHOTO */
+
+.about-photo{
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.about-photo img{
+    width:450px;
+    height:auto;
+    object-fit:contain;
+
+    background:none;
+    padding:0;
+    box-shadow:none;
+
+    transform:rotate(-2deg);
+    transition:0.3s;
+}
+
+.about-photo img:hover{
+    transform:rotate(0deg) scale(1.03);
+}
+
+
+
+/* STICKY NOTES */
+
+.info-card{
+    position:absolute;
+    width:220px;
+    background:var(--cream);
+    padding:22px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    text-align:center;
+    transition:0.3s;
+    border:1px solid rgba(0,0,0,0.05);
+
+    position:absolute;
+}
+
+.info-card::before{
+    content:"";
+    position:absolute;
+
+    width:70px;
+    height:20px;
+
+    background:rgba(244,155,181,0.35);
+
+    top:-10px;
+    left:50%;
+
+    transform:translateX(-50%) rotate(-3deg);
+
+    border-radius:4px;
+}
+
+.info-card:hover{
+    transform:translateY(-8px) rotate(0deg);
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+.info-card h3{
+    font-size:17px;
+    color:var(--pink);
+    margin-bottom:8px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.info-card p{
+    font-size:15px;
+    line-height:1.8;
+    color:var(--brown);
+}
+
+
+/* SCATTERED POSITIONS */
+
+.card1{
+    top:30px;
+    left:100px;
+    transform:rotate(-4deg);
+}
+
+.card2{
+    top:240px;
+    left:0;
+    transform:rotate(3deg);
+}
+
+.card3{
+    bottom:140px;
+    left:50px;
+    transform:rotate(-3deg);
+}
+
+.card4{
+    bottom:-30px;
+    left:200px;
+    transform:rotate(4deg);
+}
+
+.card5{
+    top:-20px;
+    right:70px;
+    transform:rotate(4deg);
+}
+
+.card6{
+    top:180px;
+    right:0;
+    transform:rotate(-3deg);
+}
+
+.card7{
+    bottom:170px;
+    right:20px;
+    transform:rotate(3deg);
+}
+
+.card8{
+    bottom:30px;
+    right:250px;
+    transform:rotate(-4deg);
+}
+
+/* ======================
+   MY VIBE
+====================== */
+
+.vibe-section{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.vibe-section h2{
+    font-size:55px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+    margin-bottom:15px;
+}
+
+.vibe-note{
+    color:var(--brown);
+    margin-bottom:50px;
+}
+
+.vibe-grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:35px;
+}
+
+.vibe-card{
+    width:250px;
+    height:220px;
+    perspective:1000px;
+}
+
+.vibe-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform 0.8s;
+    transform-style:preserve-3d;
+}
+
+.vibe-card:hover .vibe-inner{
+    transform:rotateY(180deg);
+}
+
+.vibe-front,
+.vibe-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:25px;
+    backface-visibility:hidden;
+    box-shadow:var(--shadow);
+}
+
+.vibe-front{
+    background:#ffeef4;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.vibe-front h3{
+    font-size:40px;
+    font-family:'Gaegu', cursive;
+    color:var(--pink);
+}
+
+.vibe-back{
+    background:white;
+    transform:rotateY(180deg);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:25px;
+}
+
+.vibe-back p{
+    line-height:1.8;
+    color:var(--brown);
+}
+
+/* ======================
+   LIKES & DISLIKES
+====================== */
+
+.likes-section{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.likes-section h2{
+    font-size:45px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+    margin-bottom:15px;
+}
+
+.likes-note{
+    margin-bottom:40px;
+    color:#7a5c52;
+}
+
+
+/* TABLE WRAPPER */
+
+.likes-table-wrapper{
+    max-width:850px;
+    margin:0 auto;
+}
+
+
+/* TABLE */
+
+.likes-table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+
+/* HEADER */
+
+.likes-table th{
+    width:50%;
+
+    background:#f49bb5;
+    color:white;
+
+    padding:20px;
+
+    font-size:16px;
+    font-weight:600;
+
+    text-align:center;
+}
+
+/* BODY */
+
+.likes-table td{
+    width:50%;
+
+    padding:22px 20px;
+
+    text-align:center;
+
+    color:#7a5c52;
+    font-size:15px;
+
+    border-bottom:1px solid #f3f3f3;
+}
+
+/* MIDDLE LINE */
+
+.likes-table th:first-child,
+.likes-table td:first-child{
+    border-right:2px solid #f3f3f3;
+}
+
+
+/* ALTERNATING ROWS */
+
+.likes-table tr:nth-child(even){
+    background:#fff8fa;
+}
+
+.likes-table tr:hover{
+    background:#fff0f5;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .likes-section h2{
+        font-size:38px;
+    }
+
+    .likes-table th,
+    .likes-table td{
+        padding:16px 10px;
+        font-size:14px;
+    }
+
+}
+/* ======================
+   MY HOMETOWN
+====================== */
+
+.hometown-section{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.hometown-section h2{
+    font-size:55px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+    margin-bottom:15px;
+}
+
+.hometown-note{
+    color:var(--brown);
+    margin-bottom:60px;
+}
+
+
+/* LAYOUT */
+
+.hometown-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+    flex-wrap:wrap;
+}
+
+
+/* LEFT */
+
+.hometown-images{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+
+/* PINNED PHOTOS */
+
+.pin-card{
+    background:white;
+    padding:15px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    position:relative;
+
+    transition:0.3s;
+}
+
+.pin-card:hover{
+    transform:translateY(-8px);
+}
+
+.pin-card:nth-child(1){
+    transform:rotate(-3deg);
+}
+
+.pin-card:nth-child(2){
+    transform:rotate(3deg);
+}
+
+.pin-card:nth-child(1):hover,
+.pin-card:nth-child(2):hover{
+    transform:translateY(-8px) rotate(0deg);
+}
+
+
+/* PHOTO */
+
+.pin-card img{
+    width:280px;
+    height:190px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+
+/* PIN */
+
+.pin-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:-12px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:22px;
+    height:22px;
+
+    background:var(--pink);
+
+    border-radius:50%;
+
+    box-shadow:
+        inset -3px -3px rgba(0,0,0,0.12);
+}
+
+
+/* LABEL */
+
+.pin-label{
+    margin-top:15px;
+    font-size:15px;
+    font-weight:600;
+    color:var(--brown);
+}
+
+
+/* RIGHT */
+
+.hometown-text{
+    max-width:450px;
+    text-align:left;
+
+    background:white;
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.hometown-text h3{
+    font-size:38px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+
+    margin-bottom:25px;
+}
+
+.hometown-text p{
+    line-height:2;
+    color:var(--brown);
+
+    margin-bottom:20px;
+}
+
+/* ======================
+   EDUCATION INTRO
+====================== */
+
+.edu-intro{
+    padding:120px 10% 80px;
+    text-align:center;
+}
+
+.edu-intro h1{
+    font-size:70px;
+    color:var(--pink);
+    font-family:'Gaegu', cursive;
+    margin-bottom:25px;
+}
+
+.edu-intro p{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+
+/* ======================
+   ACADEMIC JOURNEY
+====================== */
+
+.edu-cards-section{
+    padding:30px 8% 100px;
+    text-align:center;
+}
+
+.edu-cards-section h2{
+    font-size:55px;
+    color:var(--pink);
+    font-family:'Gaegu', cursive;
+    margin-bottom:15px;
+}
+
+.edu-note{
+    color:#7a5c52;
+    margin-bottom:50px;
+}
+
+.edu-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:35px;
+    justify-items:center;
+}
+
+
+/* ======================
+   EDUCATION CARD
+====================== */
+
+.edu-card{
+    width:280px;
+    background:white;
+    padding:35px 25px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.edu-card:hover{
+    transform:translateY(-8px);
+}
+
+
+/* ======================
+   LOGO
+====================== */
+
+.edu-logo-link{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    text-decoration:none;
+    margin-bottom:25px;
+}
+
+.edu-logo{
+    width:95px;
+    height:85px;
+    object-fit:contain;
+    display:block;
+}
+
+.edu-logo:hover{
+    transform:scale(1.08);
+}
+
+
+/* VISIT TAG */
+
+.visit-tag{
+    position:absolute;
+    bottom:-35px;
+    left:50%;
+    transform:translateX(-50%);
+
+    background:#f49bb5;
+    color:white;
+
+    padding:6px 12px;
+    border-radius:20px;
+
+    font-size:12px;
+    white-space:nowrap;
+
+    opacity:0;
+    transition:0.3s;
+
+    pointer-events:none;
+}
+
+.edu-logo-link:hover .visit-tag{
+    opacity:1;
+}
+
+
+/* ======================
+   CARD TEXT
+====================== */
+
+.edu-level{
+    display:inline-block;
+
+    background:#fff0f5;
+    color:#f49bb5;
+
+    padding:6px 14px;
+    border-radius:20px;
+
+    font-size:13px;
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+.edu-card h3{
+    font-size:20px;
+    color:#7a5c52;
+    margin-bottom:15px;
+}
+
+.edu-card p{
+    color:#7a5c52;
+    line-height:1.7;
+    margin-bottom:8px;
+}
+
+/* SCHOOL LOCATIONS */
+
+.school-location-section{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.school-location-section h2{
+    font-size:55px;
+    color:var(--pink);
+    font-family:'Gaegu', cursive;
+    margin-bottom:15px;
+}
+
+.location-note{
+    color:#7a5c52;
+    margin-bottom:40px;
+}
+
+.school-table-wrapper{
+    max-width:850px;
+    margin:0 auto;
+}
+
+.school-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.school-table th{
+    background:var(--green);
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.school-table td{
+    padding:22px 20px;
+    text-align:center;
+    color:#7a5c52;
+    border-bottom:1px solid #f3f3f3;
+}
+
+.school-table th:first-child,
+.school-table td:first-child{
+    border-right:2px solid #f3f3f3;
+}
+
+.school-table tr:nth-child(even){
+    background:#fff8fa;
+}
+
+.school-table a{
+    color:#7a5c52;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.school-table a:hover{
+    color:var(--pink);
+    display:inline-block;
+    transform:translateY(-2px) scale(1.05);
+}
+/* ======================
+   SCHOOL MEMORIES
+====================== */
+
+.school-memories{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.school-memories h2{
+    font-size:55px;
+    color:var(--pink);
+    font-family:'Gaegu', cursive;
+    margin-bottom:15px;
+}
+
+.memories-note{
+    color:#7a5c52;
+    margin-bottom:50px;
+}
+
+
+/* ======================
+   MEMORIES SLIDER
+====================== */
+
+.slider-container{
+    width:85%;
+    margin:0 auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+.slider{
+    width:900px;
+    max-width:100%;
+}
+
+.slider img,
+.slider video{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    display:none;
+}
+
+.slider .active{
+    display:block;
+}
+
+
+/* ======================
+   ARROWS
+====================== */
+
+.prev,
+.next{
+    border:none;
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    background:#6d8b74;
+    color:white;
+
+    font-size:24px;
+
+    cursor:url("images/cursor.png"), pointer;
+
+    transition:0.3s;
+}
+
+.prev:hover,
+.next:hover{
+    transform:scale(1.1);
+    background:#f49bb5;
+}
+
+
+/* ======================
+   MOBILE
+====================== */
+
+@media(max-width:1024px){
+
+    .edu-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .edu-intro h1{
+        font-size:50px;
+    }
+
+    .edu-cards-section h2,
+    .school-memories h2{
+        font-size:40px;
+    }
+
+    .edu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .edu-card{
+        width:100%;
+        max-width:320px;
+    }
+
+    .edu-logo{
+        width:80px;
+        height:80px;
+    }
+
+    .slider img,
+    .slider video{
+        height:280px;
+    }
+
+    .slider-container{
+        width:100%;
+        gap:10px;
+    }
+
+    .prev,
+    .next{
+        width:45px;
+        height:45px;
+        font-size:20px;
+    }
+    .school-location-section h2{
+        font-size:40px;
+    }
+
+    .school-table th,
+    .school-table td{
+        padding:16px 10px;
+        font-size:14px;
+    }
+
+    .school-table-wrapper{
+        overflow-x:auto;
+    }
+}
+
+/* ======================
+   FAMILY PAGE
+====================== */
+
+.family-video{
+    width:80%;
+    max-width:950px;
+    margin:50px auto;
+    overflow:hidden;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.10);
+}
+
+.family-video iframe{
+    width:100%;
+    height:530px;
+    border:none;
+    display:block;
+}
+
+/* FAMILY PORTRAIT */
+
+.family-portrait-section{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.family-portrait-section h2{
+    font-size:50px;
+    color:var(--green);
+    margin-bottom:50px;
+    font-family:'Gaegu', cursive;
+}
+
+.family-portrait{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.family-portrait img{
+    width:100%;
+    border-radius:25px;
+    display:block;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+/* HOTSPOTS */
+
+.hotspot{
+    position:absolute;
+    width:80px;
+    height:80px;
+    cursor: url("images/cursor.png"), pointer;
+}
+
+.hotspot span{
+    opacity:0;
+    background:#f49bb5;
+    color:white;
+    padding:10px 18px;
+    border-radius:20px;
+    transition:0.3s;
+    white-space:nowrap;
+}
+
+.hotspot:hover span{
+    opacity:1;
+}
+
+
+/* FAMILY PHOTO POSITIONS */
+
+.ayah{
+    top:45%;
+    left:35%;
+}
+
+.ibu{
+    top:45%;
+    left:60%;
+}
+
+.irfan{
+    top:36%;
+    left:75%;
+}
+
+.aisy{
+    top:58%;
+    left:20%;
+}
+
+.me{
+    top:60%;
+    left:44%;
+}
+
+
+/* FAMILY MEMBERS */
+
+.family-members{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.family-members h2{
+    font-size:50px;
+    color:var(--green);
+    margin-bottom:50px;
+    font-family:'Gaegu', cursive;
+}
+
+
+/* ======================
+   FAMILY FLIP CARDS
+====================== */
+
+.family-members{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.family-members h2{
+    font-family:'Gaegu', cursive;
+    font-size:55px;
+    color:var(--green);
+    margin-bottom:50px;
+}
+
+.flip-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:35px;
+}
+
+.flip-card{
+    width:250px;
+    height:360px;
+    perspective:1000px;
+}
+
+.flip-card-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform 0.8s;
+    transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform:rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:25px;
+    overflow:hidden;
+    backface-visibility:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.flip-card-front{
+    background:white;
+}
+
+.flip-card-front img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.flip-card-front h3{
+    margin-top:15px;
+    font-size:35px;
+    font-family:'Gaegu', cursive;
+    color:#7a5c52;
+}
+
+.flip-card-back{
+    background:#ffe7ef;
+    transform:rotateY(180deg);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+    box-sizing:border-box;
+
+    color:#7a5c52;
+}
+
+.flip-card-back h3{
+    font-size:38px;
+    font-family:'Gaegu', cursive;
+    color:var(--green);
+    margin-bottom:20px;
+}
+
+.flip-card-back p{
+    margin:5px 0;
+    line-height:1.6;
+}
+
+@media(max-width:768px){
+
+    .flip-card{
+        width:280px;
+        height:380px;
+    }
+
+}
+
+/* CAT TRANSITION */
+
+.cat-transition{
+    text-align:center;
+    padding:100px 8%;
+}
+
+.cat-divider{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.cat-divider img{
+    width:300px;
+    max-width:100%;
+}
+
+.cat-section h2{
+    font-size:55px;
+    color:#f49bb5;
+    font-family:'Gaegu', cursive;
+    margin-bottom:40px;
+}
+
+.cat-gallery{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.cat-gallery h2{
+    font-size:50px;
+    color:#f49bb5;
+    font-family:'Gaegu', cursive;
+    margin-bottom:40px;
+}
+
+.cat-video-grid iframe{
+    width:280px;
+    height:280px;
+    border:none;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.cat-video-grid iframe:hover{
+    transform:translateY(-8px);
+}
+/* ======================
+   CAT TRANSITION
+====================== */
+
+.cat-transition{
+    text-align:center;
+    padding:80px 8%;
+}
+
+.cat-divider{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.cat-divider img{
+    width:280px;
+    max-width:100%;
+}
+
+
+/* ======================
+   CAT SECTION
+====================== */
+
+.cat-section{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.cat-section h2{
+    font-size:55px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+    margin-bottom:40px;
+}
+
+
+/* ======================
+   CAT VIDEOS
+====================== */
+
+.cat-gallery{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.cat-gallery h2{
+    font-size:50px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+    margin-bottom:40px;
+}
+
+.cat-video-grid{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.cat-video-grid iframe{
+    width:340px;
+    height:605px;
+    border:none;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.cat-video-grid iframe:hover{
+    transform:translateY(-8px);
+}
+
+/* ======================
+   THANK YOU POSTCARD
+====================== */
+
+.family-note{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.family-note h2{
+    font-size:55px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+    margin-bottom:40px;
+}
+
+.postcard{
+    max-width:800px;
+    margin:0 auto;
+    background:#fffdf8;
+    border:2px solid #e8d8c3;
+    border-radius:25px;
+    padding:50px;
+    position:relative;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    transform:rotate(-1deg);
+}
+
+.stamp{
+    position:absolute;
+    top:25px;
+    right:25px;
+
+    width:70px;
+    height:70px;
+
+    border:2px dashed #f49bb5;
+    border-radius:15px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+    color:#f49bb5;
+
+    transform:rotate(10deg);
+}
+
+.postcard-content{
+    text-align:left;
+    color:#7a5c52;
+    line-height:2;
+}
+
+.dear{
+    font-family:'Gaegu', cursive;
+    font-size:35px;
+    color:var(--green);
+    margin-bottom:20px;
+}
+
+.signature{
+    margin-top:35px;
+    font-family:'Gaegu', cursive;
+    font-size:32px;
+    color:var(--green);
+}
+
+/* ======================
+   MY LOVELIES
+====================== */
+
+.friends-intro{
+    padding:120px 10% 70px;
+    text-align:center;
+}
+
+.friends-intro h1{
+    font-size:70px;
+    font-family:'Gaegu', cursive;
+    color:#d88fa2;
+    margin-bottom:20px;
+}
+
+.friends-intro p{
+    max-width:750px;
+    margin:auto;
+    line-height:2;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+
+/* ERA SECTION */
+
+.friend-era{
+    text-align:center;
+    padding:70px 10% 30px;
+}
+
+.friend-era h2{
+    font-size:55px;
+    color:#d88fa2;
+    font-family:'Gaegu', cursive;
+}
+
+.friend-era span{
+    display:block;
+    margin:10px 0 20px;
+    font-weight:600;
+    color:#7a5c52;
+}
+
+.friend-era p{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+}
+
+
+/* SLIDER */
+
+.slider-container{
+    width:85%;
+    margin:40px auto 90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+.slider{
+    width:900px;
+    max-width:100%;
+}
+
+.slider img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.prev,
+.next{
+    border:none;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#d88fa2;
+    color:white;
+    font-size:24px;
+    cursor: url("images/cursor.png"), pointer;
+    transition:0.3s;
+}
+
+.prev:hover,
+.next:hover{
+    transform:scale(1.1);
+}
+
+
+/* FRIENDS SECTION */
+
+.friends-gallery{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.friends-gallery h2{
+    font-size:55px;
+    font-family:'Gaegu', cursive;
+    color:#d88fa2;
+    margin-bottom:60px;
+}
+
+
+/* FRIEND GRID */
+
+.friends-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+    justify-items:center;
+}
+
+
+/* POLAROIDS */
+
+.friend-polaroid{
+    background:white;
+    padding:15px 15px 25px;
+    width:220px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.friend-polaroid:nth-child(odd){
+    transform:rotate(-3deg);
+}
+
+.friend-polaroid:nth-child(even){
+    transform:rotate(3deg);
+}
+
+.friend-polaroid:hover{
+    transform:scale(1.05);
+}
+
+.friend-polaroid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.friend-polaroid p{
+    margin-top:15px;
+    font-size:28px;
+    color:#7a5c52;
+    font-family:'Gaegu', cursive;
+}
+
+
+/* MOBILE */
+
+@media(max-width:1024px){
+
+.friends-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.friends-intro h1{
+    font-size:50px;
+}
+
+.friend-era h2{
+    font-size:40px;
+}
+
+.friends-gallery h2{
+    font-size:45px;
+}
+
+.slider img{
+    height:280px;
+}
+
+.friends-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.friend-polaroid{
+    width:180px;
+}
+
+.friend-polaroid img{
+    height:220px;
+}
+
+}
+
+@media(max-width:500px){
+
+.friends-grid{
+    grid-template-columns:1fr;
+}
+
+.friend-polaroid{
+    width:250px;
+}
+
+}
+
+/* ======================
+   CURRENT OBSESSIONS
+====================== */
+
+.obsession-note{
+    padding:120px 10% 80px;
+    text-align:center;
+}
+
+.obsession-note h1{
+    font-size:70px;
+    font-family:'Gaegu', cursive;
+    color:var(--green);
+    margin-bottom:25px;
+}
+
+.obsession-note p{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+
+/* MOVING TEXT */
+
+.marquee{
+    overflow:hidden;
+    white-space:nowrap;
+    padding:20px 0;
+    background:#1f1f1f;
+    margin-top:30px;
+}
+
+.marquee-content{
+    display:inline-block;
+    color:white;
+    font-size:18px;
+    animation:marquee 18s linear infinite;
+}
+
+@keyframes marquee{
+    from{
+        transform:translateX(100%);
+    }
+
+    to{
+        transform:translateX(-100%);
+    }
+}
+
+
+
+/* ======================
+   OBSESSION INTRO NOTE
+====================== */
+
+.obsession-note{
+    padding:120px 10% 80px;
+    text-align:center;
+}
+
+.obsession-note h1{
+    font-size:75px;
+    font-family:'Gaegu', cursive;
+    color:var(--green);
+    margin-bottom:20px;
+}
+
+.obsession-note p{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+
+
+/* ======================
+   MUSIC SECTION
+====================== */
+
+.music-section{
+    padding:50px 8%;
+    text-align:center;
+}
+
+.music-section h2{
+    font-size:55px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+}
+
+.music-note{
+    margin-top:15px;
+    margin-bottom:50px;
+    color:#7a5c52;
+}
+
+
+/* FIRST ROW */
+
+.music-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:35px;
+    justify-items:center;
+}
+
+
+/* SECOND ROW */
+
+.music-grid-bottom{
+    display:flex;
+    justify-content:center;
+    gap:150px;
+    margin-top:45px;
+}
+
+
+
+/* ======================
+   MUSIC CARDS
+====================== */
+
+.music-card{
+    width:250px;
+    background:#ffd9e6;
+    border-radius:30px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.music-card:hover{
+    transform:translateY(-8px);
+}
+
+.music-header{
+    font-size:15px;
+    margin-bottom:15px;
+    color:#7a5c52;
+    font-weight:600;
+}
+
+.music-card img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.music-card h3{
+    font-size:28px;
+    color:#7a5c52;
+    font-family:'Gaegu', cursive;
+}
+
+.artist{
+    margin-top:5px;
+    margin-bottom:20px;
+    color:#7a5c52;
+}
+
+.music-buttons button{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    cursor: url("images/cursor.png"), pointer;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.music-buttons button:hover{
+    transform:scale(1.1);
+}
+
+.music-card a{
+    display:block;
+    margin-top:20px;
+    color:#7a5c52;
+    text-decoration:none;
+}
+
+.music-card a:hover{
+    text-decoration:underline;
+}
+
+
+
+/* ======================
+   FLOWER SECTION
+====================== */
+
+.flower-section{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.flower-section h2{
+    font-size:55px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+}
+
+.flower-note{
+    max-width:650px;
+    margin:20px auto 50px;
+    line-height:2;
+}
+
+
+
+/* FLOWER BUTTON */
+
+.flower-button{
+    width:120px;
+    height:120px;
+    border:none;
+    border-radius:50%;
+    background:#9fd38b;
+    font-size:50px;
+    cursor: url("images/cursor.png"), pointer;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.flower-button:hover{
+    transform:rotate(15deg) scale(1.08);
+}
+
+
+
+/* ======================
+   MOODBOARD
+====================== */
+
+#moodboard{
+    display:none;
+    position:relative;
+    height:700px;
+    margin-top:60px;
+}
+
+.mood-item{
+    position:absolute;
+    text-align:center;
+    transition:0.4s;
+}
+
+.mood-item:hover{
+    transform:scale(1.08);
+}
+
+.mood-item img{
+    width:130px;
+    height:130px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.mood-item p{
+    margin-top:10px;
+    font-family:'Gaegu', cursive;
+    font-size:25px;
+    color:#7a5c52;
+}
+
+
+/* SCATTERED POSITIONS */
+
+.item1{
+    top:20px;
+    left:25%;
+}
+
+.item2{
+    top:150px;
+    left:5%;
+}
+
+.item3{
+    top:70px;
+    right:15%;
+}
+
+.item4{
+    top:250px;
+    right:5%;
+}
+
+.item5{
+    top:330px;
+    left:20%;
+}
+
+.item6{
+    top:420px;
+    right:20%;
+}
+
+.item7{
+    top:525px;
+    left:12%;
+}
+
+.item8{
+    top:90px;
+    left:50%;
+}
+
+.item9{
+    top:530px;
+    right:45%;
+}
+
+.item10{
+    top:300px;
+    left:46%;
+}
+
+
+/* ======================
+   PUZZLE
+====================== */
+
+.puzzle-section{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.puzzle-section h2{
+    font-size:55px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+}
+
+.puzzle-grid{
+    display:grid;
+    grid-template-columns:repeat(2,200px);
+    justify-content:center;
+    gap:15px;
+    margin-top:40px;
+}
+
+.piece{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    cursor: url("images/cursor.png"), pointer;
+    border-radius:20px;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    opacity:0.80;
+}
+
+.piece:hover{
+    transform:scale(1.05);
+    opacity:1;
+    transform:scale(1.05);
+}
+
+.piece.solved{
+    visibility:hidden;
+}
+
+#finalPuzzle{
+    display:none;
+    margin-top:50px;
+}
+
+#finalPuzzle img{
+    width:350px;
+    max-width:90%;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+#finalPuzzle h3{
+    margin-top:30px;
+    font-size:40px;
+    color:var(--green);
+    font-family:'Gaegu', cursive;
+}
+
+#finalPuzzle p{
+    margin-top:15px;
+    line-height:2;
+}
+
+
+
+/* ======================
+   MOBILE
+====================== */
+
+@media(max-width:768px){
+
+    .music-grid{
+        grid-template-columns:1fr;
+    }
+
+    .music-grid-bottom{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    #moodboard{
+        height:auto;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
+    }
+
+    .mood-item{
+        position:static;
+    }
+
+    .puzzle-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* ======================
+   MEMORY LANE
+====================== */
+
+.memory-intro{
+    padding:120px 10% 80px;
+    text-align:center;
+}
+
+.memory-intro h1{
+    font-size:70px;
+    color:var(--pink);
+    font-family:'Gaegu', cursive;
+    margin-bottom:25px;
+}
+
+.memory-intro p{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+
+/* MEMORY WALL */
+
+.memory-wall{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.memory-wall h2{
+    font-size:55px;
+    color:var(--pink);
+    margin-bottom:60px;
+    font-family:'Gaegu', cursive;
+}
+
+.memory-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:40px;
+    justify-items:center;
+}
+
+/* POLAROIDS */
+
+.memory-polaroid{
+    background:white;
+    padding:15px 15px 25px;
+    width:230px;
+    height:auto;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.memory-polaroid:hover{
+    transform:scale(1.05);
+}
+
+.memory-polaroid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+}
+
+.memory-polaroid p{
+    margin-top:18px;
+    font-family:'Gaegu', cursive;
+    font-size:24px;
+    color:#7a5c52;
+}
+
+
+/* RANDOM ROTATION */
+
+.rotate-left{
+    transform:rotate(-4deg);
+}
+
+.rotate-right{
+    transform:rotate(4deg);
+}
+
+
+/* DELETE SECTION */
+
+.delete-section{
+    padding:120px 8%;var(--shadow)
+    display:flex;
+    justify-content:center;
+}
+
+.delete-box{
+    background:white;
+    padding:60px;
+    border-radius:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    position:relative;
+    overflow:hidden;
+}
+
+.delete-box h2{
+    font-size:55px;
+    color:var(--pink);
+    margin-bottom:20px;
+    font-family:'Gaegu', cursive;
+}
+
+.delete-box p{
+    line-height:2;
+}
+
+
+/* BUTTONS */
+
+.delete-buttons{
+    margin-top:35px;
+    position:relative;
+    height:120px;
+}
+
+.delete-buttons button{
+    border:none;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:16px;
+    cursor: url("images/cursor.png"), pointer;
+    transition:0.3s;
+    font-family:'Poppins', sans-serif;
+}
+
+
+/* YES BUTTON */
+
+#yesBtn{
+    background:var(--pink);
+    color:white;
+    position:absolute;
+    left:40%;
+}
+
+
+/* NO BUTTON */
+
+#noBtn{
+    background:var(--green);
+    color:white;
+    position:absolute;
+    left:50%;
+}
+
+
+/* MESSAGE */
+
+#memoryMessage{
+    margin-top:40px;
+    font-size:20px;
+    color:#7a5c52;
+    font-family:'Gaegu', cursive;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.memory-intro h1{
+    font-size:50px;
+}
+
+.memory-intro p{
+    padding:30px;
+}
+
+.memory-wall h2{
+    font-size:40px;
+}
+
+.memory-polaroid{
+    width:100%;
+    max-width:300px;
+}
+
+.delete-box{
+    padding:35px;
+}
+
+.delete-box h2{
+    font-size:38px;
+}
+
+.delete-buttons{
+    height:180px;
+}
+
+#yesBtn{
+    left:20%;
+}
+
+}
+
+
+

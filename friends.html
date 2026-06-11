@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Lovelies</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="friends-page">
+
+<audio id="bgMusic" autoplay loop>
+    <source src="audio/bgsound.mp3" type="audio/mpeg">
+</audio>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+
+<video autoplay muted loop playsinline>
+
+<source src="video/logo.mp4" type="video/mp4">
+
+</video>
+</a>
+</div>
+
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+
+<a href="about.html" class="dropdown-toggle">
+Get To Know Alya
+</a>
+
+<ul class="dropdown-menu"> 
+
+<li><a href="about.html#biodata">my biodata</a></li> 
+
+<li><a href="about.html#vibe">my vibe</a></li> 
+
+<li><a href="about.html#likes">things i like & dislike</a></li> 
+
+<li><a href="about.html#hometown">my hometown</a></li> 
+
+</ul> 
+
+</li>
+
+<li>
+    <a href="education.html">My Academic Journey</a>
+</li>
+
+<li class="dropdown">
+
+<a href="family.html" class="dropdown-toggle">
+My Beloved Family
+</a>
+
+<ul class="dropdown-menu">
+
+<li><a href="family.html#myfamily">My Family</a></li>
+<li><a href="family.html#mycats">My Cats</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="friends.html">My Lovelies</a></li>
+
+<li><a href="interests.html">Current Obsessions</a></li>
+
+<li><a href="moments.html">Memory Lane</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- INTRO -->
+
+<section class="friends-intro">
+
+<h1>my lovelies</h1>
+
+<p>
+
+some friendships happen unexpectedly, but somehow become some of the most important chapters of our lives. these are the people who filled my days with laughter, support and countless memories.
+
+</p>
+
+</section>
+
+
+<!-- SCHOOL ERA -->
+
+<section class="friend-era">
+
+<h2>school era</h2>
+
+<span>2012 - 2022</span>
+
+<p>
+
+the years that gave me unforgettable memories, inside jokes and friendships that still make me smile today.
+
+</p>
+
+</section>
+
+
+<!-- SCHOOL SLIDER -->
+
+<section class="slider-container">
+
+<button class="prev" onclick="moveSchoolSlide(-1)">❮</button>
+
+<div class="slider">
+
+<img src="images/school1.jpeg" class="school-slide active">
+
+<img src="images/school2.jpeg" class="school-slide">
+
+<img src="images/school3.jpeg" class="school-slide">
+
+<img src="images/school4.jpeg" class="school-slide">
+
+</div>
+
+<button class="next" onclick="moveSchoolSlide(1)">❯</button>
+
+</section>
+
+
+<!-- UNIVERSITY ERA -->
+
+<section class="friend-era">
+
+<h2>university era</h2>
+
+<span>2023 - Present</span>
+
+<p>
+
+new beginnings, unexpected friendships and people who made university life much brighter.
+
+</p>
+
+</section>
+
+
+<!-- UNIVERSITY SLIDER -->
+
+<section class="slider-container">
+
+<button class="prev" onclick="moveUniSlide(-1)">❮</button>
+
+<div class="slider">
+
+<img src="images/uni1.jpeg" class="uni-slide active">
+
+<img src="images/uni2.jpeg" class="uni-slide">
+
+<img src="images/uni3.jpeg" class="uni-slide">
+
+<img src="images/uni4.jpeg" class="uni-slide">
+
+</div>
+
+<button class="next" onclick="moveUniSlide(1)">❯</button>
+
+</section>
+
+
+<!-- FRIENDS POLAROID SECTION -->
+
+<section class="friends-gallery">
+
+<h2>meet my friends ♡</h2>
+
+<div class="friends-grid">
+
+<div class="friend-polaroid">
+<img src="images/simran.jpeg">
+<p>Simran</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/syaza.jpeg">
+<p>Syaza</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/diva.jpeg">
+<p>Diva</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/ikhfa.jpeg">
+<p>Ikhfa</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/iklil.jpeg">
+<p>Iklil</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/nabilah.jpeg">
+<p>Nabilah</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/najwa.jpeg">
+<p>Najwa</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/izzah.jpeg">
+<p>Izzah</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/widya.jpeg">
+<p>Widya</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/dina.jpeg">
+<p>Dina</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/meera.jpeg">
+<p>Meera</p>
+</div>
+
+<div class="friend-polaroid">
+<img src="images/ain.jpeg">
+<p>Ain</p>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+    <h3>hit me up & let's be mutuals</h3>
+
+    <div class="footer-links">
+
+        <a href="https://instagram.com/alynirss"
+           target="_blank">
+           Instagram
+        </a>
+
+        <a href="mailto:hcneylya@gmail.com">
+           Email
+        </a>
+
+    </div>
+
+    <p>© 2026 Alya's Archive</p>
+
+    <p>Recommended Browser: Microsoft Edge | Last Updated: May 2026</p>
+
+</footer>
+
+
+
+<script>
+
+let schoolIndex = 0;
+
+const schoolSlides =
+document.querySelectorAll(".school-slide");
+
+function showSchoolSlide(n){
+
+schoolSlides.forEach(slide =>
+slide.style.display="none");
+
+schoolSlides[n].style.display="block";
+
+}
+
+function moveSchoolSlide(step){
+
+schoolIndex += step;
+
+if(schoolIndex >= schoolSlides.length)
+schoolIndex = 0;
+
+if(schoolIndex < 0)
+schoolIndex = schoolSlides.length - 1;
+
+showSchoolSlide(schoolIndex);
+
+}
+
+showSchoolSlide(schoolIndex);
+
+
+
+let uniIndex = 0;
+
+const uniSlides =
+document.querySelectorAll(".uni-slide");
+
+function showUniSlide(n){
+
+uniSlides.forEach(slide =>
+slide.style.display="none");
+
+uniSlides[n].style.display="block";
+
+}
+
+function moveUniSlide(step){
+
+uniIndex += step;
+
+if(uniIndex >= uniSlides.length)
+uniIndex = 0;
+
+if(uniIndex < 0)
+uniIndex = uniSlides.length - 1;
+
+showUniSlide(uniIndex);
+
+}
+
+showUniSlide(uniIndex);
+
+</script>
+
+<script>
+
+const bgMusic = document.getElementById("bgMusic");
+
+
+/* RESTORE MUSIC STATE */
+
+window.addEventListener("load", () => {
+
+    if(localStorage.getItem("musicPlaying") === "true"){
+
+        bgMusic.play().catch(() => {});
+
+    }
+
+});
+
+
+/* START MUSIC AFTER FIRST USER INTERACTION */
+
+document.addEventListener("click", () => {
+
+    if(bgMusic.paused){
+
+        bgMusic.play().catch(() => {});
+        localStorage.setItem("musicPlaying", "true");
+
+    }
+
+}, { once:true });
+
+
+/* SAVE WHETHER MUSIC IS PLAYING */
+
+bgMusic.addEventListener("play", () => {
+
+    localStorage.setItem("musicPlaying", "true");
+
+});
+
+bgMusic.addEventListener("pause", () => {
+
+    localStorage.setItem("musicPlaying", "false");
+
+});
+
+
+/* PAUSE WEBSITE MUSIC WHEN A VIDEO WITH SOUND PLAYS */
+
+const videos = document.querySelectorAll("video");
+
+videos.forEach(video => {
+
+    /* Ignore muted videos like your logo */
+
+    if(video.muted) return;
+
+    video.addEventListener("play", () => {
+
+        bgMusic.pause();
+
+    });
+
+    video.addEventListener("pause", () => {
+
+        if(!video.ended){
+
+            bgMusic.play().catch(() => {});
+
+        }
+
+    });
+
+    video.addEventListener("ended", () => {
+
+        bgMusic.play().catch(() => {});
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>

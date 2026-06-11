@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memory Lane</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="memory-page">
+
+<audio id="bgMusic" autoplay loop>
+    <source src="audio/bgsound.mp3" type="audio/mpeg">
+</audio>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<a href="index.html">
+
+<video autoplay muted loop playsinline>
+
+<source src="video/logo.mp4" type="video/mp4">
+
+</video>
+</a>
+</div>
+
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+
+<a href="about.html" class="dropdown-toggle">
+Get To Know Alya
+</a>
+
+<ul class="dropdown-menu"> 
+
+<li><a href="about.html#biodata">my biodata</a></li> 
+
+<li><a href="about.html#vibe">my vibe</a></li> 
+
+<li><a href="about.html#likes">things i like & dislike</a></li> 
+
+<li><a href="about.html#hometown">my hometown</a></li> 
+
+</ul> 
+
+</li>
+
+<li>
+    <a href="education.html">My Academic Journey</a>
+</li>
+
+<li class="dropdown">
+
+<a href="family.html" class="dropdown-toggle">
+My Beloved Family
+</a>
+
+<ul class="dropdown-menu">
+
+<li><a href="family.html#myfamily">My Family</a></li>
+<li><a href="family.html#mycats">My Cats</a></li>
+
+</ul>
+
+</li>
+
+<li><a href="friends.html">My Lovelies</a></li>
+
+<li><a href="interests.html">Current Obsessions</a></li>
+
+<li><a href="moments.html">Memory Lane</a></li>
+
+</ul>
+
+</nav>
+
+<!-- INTRO -->
+
+<section class="memory-intro">
+
+<h1>memory lane</h1>
+
+<p>
+
+some moments become memories before we even realise how important they are.
+
+</p>
+
+</section>
+
+<!-- MEMORY WALL -->
+
+<section class="memory-wall">
+
+<h2>little pieces of my life</h2>
+
+<div class="memory-grid">
+
+<div class="memory-polaroid rotate-left">
+
+<img src="images/siblings.jpeg">
+
+<p>little versions of us that only exist in memories now</p>
+
+</div>
+
+
+<div class="memory-polaroid rotate-right">
+
+<img src="images/atukwan.jpeg">
+
+<p>the ones i miss the most</p>
+
+</div>
+
+
+<div class="memory-polaroid rotate-left">
+
+<img src="images/parents.jpeg">
+
+<p>thank you for existing in my life</p>
+
+</div>
+
+
+<div class="memory-polaroid rotate-right">
+
+<img src="images/labu.jpeg">
+
+<p>gone from sight, never from my heart</p>
+
+</div>
+
+
+<div class="memory-polaroid rotate-left">
+
+<img src="images/karok.jpeg">
+
+<p>days i wish i could relive just once more</p>
+
+</div>
+
+
+<div class="memory-polaroid rotate-right">
+
+<img src="images/study.jpeg">
+
+<p>the chaos we somehow survived together</p>
+
+</div>
+
+
+<div class="memory-polaroid rotate-left">
+
+<img src="images/food.jpeg">
+
+<p>the meals that tasted like happiness</p>
+
+</div>
+
+
+<div class="memory-polaroid rotate-right">
+
+<img src="images/rainy.jpeg">
+
+<p>rainy days that somehow felt like home</p>
+
+</div>
+
+<div class="memory-polaroid rotate-right">
+
+<img src="images/bday.jpeg">
+
+<p>the sweetest chapters are still unfolding</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DELETE MEMORIES -->
+
+<section class="delete-section">
+
+<div class="delete-box">
+
+<h2>do you think i should delete these memories?</h2>
+
+<p>
+once deleted, these moments can never be brought back again.
+</p>
+
+<div class="delete-buttons">
+
+<button id="yesBtn">yes</button>
+
+<button id="noBtn">no</button>
+
+</div>
+
+<p id="memoryMessage"></p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+    <h3>hit me up & let's be mutuals</h3>
+
+    <div class="footer-links">
+
+        <a href="https://instagram.com/alynirss"
+           target="_blank">
+           Instagram
+        </a>
+
+        <a href="mailto:hcneylya@gmail.com">
+           Email
+        </a>
+
+    </div>
+
+    <p>© 2026 Alya's Archive</p>
+
+    <p>Recommended Browser: Microsoft Edge | Last Updated: May 2026</p>
+
+</footer>
+
+<script>
+
+const yesBtn=document.getElementById("yesBtn");
+
+yesBtn.addEventListener("mouseover",function(){
+
+const x=Math.floor(Math.random()*300)-150;
+
+const y=Math.floor(Math.random()*200)-100;
+
+yesBtn.style.transform=`translate(${x}px, ${y}px)`;
+
+});
+
+
+const noBtn=document.getElementById("noBtn");
+
+const memoryMessage=document.getElementById("memoryMessage");
+
+noBtn.addEventListener("click",function(){
+
+memoryMessage.innerHTML="maybe not every memory is meant to be forgotten.";
+
+});
+
+
+</script>
+
+<script>
+
+const bgMusic = document.getElementById("bgMusic");
+
+
+/* RESTORE MUSIC STATE */
+
+window.addEventListener("load", () => {
+
+    if(localStorage.getItem("musicPlaying") === "true"){
+
+        bgMusic.play().catch(() => {});
+
+    }
+
+});
+
+
+/* START MUSIC AFTER FIRST USER INTERACTION */
+
+document.addEventListener("click", () => {
+
+    if(bgMusic.paused){
+
+        bgMusic.play().catch(() => {});
+        localStorage.setItem("musicPlaying", "true");
+
+    }
+
+}, { once:true });
+
+
+/* SAVE WHETHER MUSIC IS PLAYING */
+
+bgMusic.addEventListener("play", () => {
+
+    localStorage.setItem("musicPlaying", "true");
+
+});
+
+bgMusic.addEventListener("pause", () => {
+
+    localStorage.setItem("musicPlaying", "false");
+
+});
+
+
+/* PAUSE WEBSITE MUSIC WHEN A VIDEO WITH SOUND PLAYS */
+
+const videos = document.querySelectorAll("video");
+
+videos.forEach(video => {
+
+    /* Ignore muted videos like your logo */
+
+    if(video.muted) return;
+
+    video.addEventListener("play", () => {
+
+        bgMusic.pause();
+
+    });
+
+    video.addEventListener("pause", () => {
+
+        if(!video.ended){
+
+            bgMusic.play().catch(() => {});
+
+        }
+
+    });
+
+    video.addEventListener("ended", () => {
+
+        bgMusic.play().catch(() => {});
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
